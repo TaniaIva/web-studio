@@ -387,7 +387,10 @@ h2 {
 
 .feature .icon-block {
    display: block;
+
    height: 120px;
+   width: 100%;
+
    margin-bottom: 30px;
    background: #F5F4FA;
    border-radius: 4px;
@@ -499,37 +502,49 @@ h2 {
 .social-items {
    display: flex;
    justify-content: center;
+   align-items: center;
    column-gap: 10px;
-   padding: 0;
+   
+   padding-left: 0;
 }
 
 .social-link{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 44px;
+   height: 44px;
+
    color: var(--main-color);
-   
 }
 
 .social-icon {
+   display: block;
+
    fill: currentColor;
-   height: 44px;
-   width: 44px;
-   border-radius: 100%;
-   padding-left: 12px;
+   height: 20px;
+   width: 20px;
 }
 
-.social-icon:hover {
-   background: var(--accent-color);
+.social-link:hover {
+   background-color: var(--accent-color);
+   border-radius: 50%;
    color: var(--white-color);
 }
 
 .clients {
    display: flex;
+
    column-gap: 30px;
    margin-top: 0;
-   margin-bottom: 94px
+   margin-bottom: 94px;
+   padding-left: 0;
 }
 
 .client-link {
    color: #AFB1B8;
+   
 }
 
 .client-item {
@@ -538,11 +553,17 @@ h2 {
    padding-bottom: 20px;
    height: 90px;
    width: 170px;
+
+   border: 1px solid #AFB1B8;
+   border-radius: 4px;
+
    fill: currentColor;
 }
 
 .client-item:hover, .client-item:focus {
    fill: var(--accent-color);
+   color: var(--accent-color);
+   border-color: var(--accent-color);
 }
 
 /* main-portfolio */
@@ -655,13 +676,17 @@ h2 {
 
 /* footer */
 .footer {
-   padding: 60px 0;
+   padding-top: 60px;
+   background: #2F303A;
+   height: 252px;
 }
 
 .authentication-list.down {
+   display: inline-block;
    font-weight: 400;
    font-size: 14px;
    line-height: 1.71;
+   margin-bottom: 9px;
 }
 
 .authentication-list:hover, .authentication-list:focus {
@@ -673,17 +698,13 @@ h2 {
    font-size: 14px;
    line-height: 1.71;
    font-style: inherit;
-}
-
-.footer{
-   margin-bottom: 70px;
-   background: #2F303A;
-   height: 252px;
+   margin-top: 20px;
+   margin-bottom: 9px;
 }
 
 .footer-blocks {
    display: flex;
-   align-items: center;
+   justify-content: space-between;
    column-gap: 70px;
 }
 
@@ -691,34 +712,91 @@ h2 {
    color: var(--white-color);
 }
 
-.connects-title {
+.connects-list {
+   padding-left: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   column-gap: 10px;
+}
+
+.connects-item {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 44px;
+   height: 44px;
+
+   background-color:  rgba(255, 255, 255, 0.1);
+   border-radius: 100%;
+}
+
+.connects-social {
+   fill: var(--white-color);
+   width: 20px;
+   height: 20px;
+} 
+
+.connects-item:focus, 
+.connects-item:hover {
+   background-color: var(--accent-color);
+}
+
+
+.footer-title {
    font-weight: 700;
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.03em;
    text-transform: uppercase;
    margin-bottom: 20px;
-   
+   color: var(--white-color);
 }
 
-.connects-list {
-   display: flex;
-   column-gap: 10px;
-   width: 206px;
-   margin: 0;
-   padding: 0;
+.footer-input {
+   width: 358px;
+   height: 50px;
+
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   border-radius: 4px;
+
+   background-color: #2F303A;
+
+   padding-left: 16px;
 }
 
-.connects-social {
-   width: 44px;
-   height: 44px;
-   padding-left: 12px;
-   border-radius: 100%;
-   background: rgba(255, 255, 255, 0.1);
-   fill: currentColor;
+.footer-button {
+   position: relative;
+
+   height: 50px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 28px;
+   padding-right: 62px;
+
+   background: #2196F3;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   border: none;
+   color: var(--white-color);
    cursor: pointer;
 }
 
-.connects-social:focus, .connects-social:hover {
-   background-color: var(--accent-color);
+.footer-button::before {
+   display: block;
+   position: absolute;
+   right: 33px;
+   top: 13px;
+   content: '';
+   width: 24px;
+   height: 24px;
+
+
+   background: url(/img/icons/icon-send.svg);
 }
+
+
+
